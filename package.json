@@ -1,0 +1,38 @@
+{
+  "name": "my-awesome-plugin",
+  "version": "1.0.0",
+  "description": "Certificate generator",
+  "main": "dist/my-awesome-plugin.umd.js",
+  "module": "dist/my-awesome-plugin.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-awesome-plugin.es.js",
+      "require": "./dist/my-awesome-plugin.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vite preview",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vitest": "^0.0.1",
+    "@vue/cli-service": "^5.0.0",
+    "@vue/test-utils": "^2.0.0",
+    "jest": "^27.0.0",
+    "tailwindcss": "^3.0.0",
+    "daisyui": "^2.0.0",
+    "postcss": "^8.0.0",
+    "autoprefixer": "^10.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0",
+    "pinia": "^2.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "vueComponentName": "MyAwesomePluginComponent",
+  "vueComponentPath": "./src/components/MyAwesomePluginComponent.vue"
+}
