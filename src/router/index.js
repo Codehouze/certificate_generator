@@ -1,13 +1,15 @@
-
 import { createRouter, createWebHistory } from 'vue-router';
-
-const routes = [
-  // Define your routes here
-];
+import CertificateGeneratorPlugin from '../components/index';
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: CertificateGeneratorPlugin,
+    },
+  ],
 });
 
 export default router;
